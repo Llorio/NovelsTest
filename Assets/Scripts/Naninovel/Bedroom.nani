@@ -1,0 +1,4 @@
+#Enter
+@back bedroom
+@set CurrentLocation="Bedroom"
+@goto ArtifactQuest

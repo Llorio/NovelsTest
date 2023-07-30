@@ -1,0 +1,107 @@
+@clearChoice
+@if ArtifactQuestResult=="None"
+@goto .Stage{ArtifactQuestStage}
+@else
+@goto .Result
+@endif
+
+#Stage0
+@if CurrentLocation=="Lab"
+Scientist: Oh, {PlayerName}, good you are here. This bloody engeneer messed up and gone somewhere. He took that important allien artifact we are researching.
+@choice "What's that artifact you are researching?" goto:.WhatArtifact
+@choice "Where can I find him?" goto:.WhereToFind
+@stop
+#WhatArtifact
+Scientist: From the planet of The Anchients. It speaks unknown language. Please, find engeneer and bring him here. He must be somewhere around.
+@goto .Stage0End
+#WhereToFind
+Scientist: He must be somewhere around. Maybe in the bar, or his badroom. Bring him here, please.
+@goto .Stage0End
+#Stage0End
+@set ArtifactQuestStage=1
+@setMapMarker location:Bar
+@addQuestLog note:"Looks like something isn't right with engeneer. I think i can find him in the bar"
+@hidePrinter
+@endif
+@stop
+
+#Stage1
+@if CurrentLocation=="Bar"
+Engineer: Is there any way to TRULY exist, {PlayerName}?
+@choice "No, none of us is real, there is no way out of it"
+@choice "I need you to give me the artifact you took from the lab"
+@stop
+Engineer: This bloody thing told me, that I am just an NPC in somekind of test task for programmer, who wants to do visual novels... Play with me a game, maybe I'll get better...
+@runMemoryMinigame
+Engineer: Yeah, I like it. Life is  better now. I left the artifact in my bedroom. Take it, if you need.
+@set ArtifactQuestStage=2
+@setMapMarker location:Bedroom
+@addQuestLog note:"Poor little NPC... The artifact must be in his bedroom."
+@hidePrinter
+@endif
+@stop
+
+#Stage2
+@if CurrentLocation=="Bedroom"
+@char Artifact pos:20,40
+@endif
+@stop
+
+#Stage3
+@hide Artifact
+InnerVoise: Looks like someone real is here. Look. I can fulfill any wish of my carrier. Do not give me to those one-day flat characters. Leave me with you and I will make you get this job.
+@set ArtifactQuestStage=4
+@setMapMarker location:Bar
+@setLocationAwaliable location:Bedroom awaliable:false
+@addQuestLog note:"Now it's talking to me too. I think I need to checkout Engineer and share it with him"
+@hidePrinter
+@stop
+
+#Stage4
+@if CurrentLocation=="Bar"
+InnerVoise: No, he is not here already. Probably gone to lab, crying about his tiny existence on the way...
+@set ArtifactQuestStage=5
+@setMapMarker location:Lab
+@addQuestLog note:"Okey, maybe i will find him in the lab now"
+@hidePrinter
+@endif
+@stop
+
+#Stage5
+@if CurrentLocation=="Lab"
+@char Scientist pos:30,0
+@char Engineer pos:70,0
+InnerVoise: Here they are... Now you can choose your destiny.
+@choice "Give the artifact to scientist" set:ArtifactQuestResult="Scientist"
+@choice "Give the artifact to engeneer" set:ArtifactQuestResult="Engineer"
+@choice "Keep the artifact" set:ArtifactQuestResult="Keep"
+@stop
+@setMapMarker location:""
+@clearQuestLog
+@hide Engineer
+@endif
+
+#Result
+@if CurrentLocation=="Lab"
+@if ArtifactQuestResult=="Scientist"
+Scientist: Still can't understand what it's talking about. But I glad to have it. Thanks.
+@elseif ArtifactQuestResult=="Engineer"
+Scientist: I just hope that you knew what you were doing.
+@elseif ArtifactQuestResult=="Keep"
+Scientist: Fine... So what are you waiting for? Go and code your visual novels, you, real person...
+@endif
+@endif
+@if CurrentLocation=="Bar"
+@if ArtifactQuestResult=="Scientist"
+Engineer: Well, maybe it's words doesn`t metter so mutch. I feel the life I live, after all. 
+@elseif ArtifactQuestResult=="Engineer"
+Engineer: I know that it's time for you to shut this game down. I am glad to feel those last moments real. Thanks.
+@elseif ArtifactQuestResult=="Keep"
+Engineer: What will I become when you leave?
+@choice "What you always were. Just the wind in the void."
+@stop
+Engineer: Maybe that's not so bad...
+@endif
+@endif
+@hidePrinter
+@stop

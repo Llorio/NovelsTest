@@ -1,0 +1,4 @@
+@bgm blues
+@input PlayerName summary:"Choose your name."
+@stop
+@goto Lab

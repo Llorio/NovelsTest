@@ -1,0 +1,5 @@
+#Enter
+@back lab
+@set CurrentLocation="Lab"
+@char Scientist
+@goto ArtifactQuest

@@ -1,0 +1,113 @@
+; English <en> to Russian <ru> localization document for `ArtifactQuest` naninovel script
+
+# 641e7f3f
+; Scientist: Oh, {PlayerName}, good you are here. This bloody engeneer messed up and gone somewhere. He took that important allien artifact we are researching.
+Scientist: О, {PlayerName}, хорошо, что ты здесь. Этот чертов инженер накосячил и куда-то пропал. Он забрал важный инопланетный артефакт, который мы исследуем.
+
+# 146713d5
+; @choice "What's that artifact you are researching?" goto:.WhatArtifact
+@choice "Что за артефакт вы исследуете?" goto:.WhatArtifact
+
+# b4211efa
+; @choice "Where can I find him?" goto:.WhereToFind
+@choice "Где я могу найти его??" goto:.WhereToFind
+
+# bd5a93f3
+; Scientist: From the planet of The Anchients. It speaks unknown language. Please, find engeneer and bring him here. He must be somewhere around.
+Scientist: С планеты Древних. Он говорит на неизвестном языке. Пожалуйста, найди инженера и приведи его сюда. Он должен быть где-то поблизости.
+
+# 3f8b8ec2
+; Scientist: He must be somewhere around. Maybe in the bar, or his badroom. Bring him here, please.
+Scientist: Он должен быть где-то поблизости. Может быть, в баре или в его спальне. Приведи его сюда, пожалуйста.
+
+# 57e349a1
+; @addQuestLog note:"Looks like something isn't right with engeneer. I think i can find him in the bar"
+@addQuestLog note:"Похоже, что-то не так с инженером. Думаю, я смогу найти его в баре"
+
+# d8e212fd
+; Engineer: Is there any way to TRULY exist, {PlayerName}?
+Engineer: Есть ли способ существовать по-настоящему, {PlayerName}?
+
+# e930a064
+; @choice "No, none of us is real, there is no way out of it"
+ @choice "Нет, мы все ненастоящие, с этим ничего не поделать."
+
+# 8892ab55
+; @choice "I need you to give me the artifact you took from the lab"
+@choice "Мне нужно, чтобы ты отдал мне артефакт, который ты взял из лаборатории."
+
+# c708eb1
+; Engineer: This bloody thing told me, that I am just an NPC in somekind of test task for programmer, who wants to do visual novels... Play with me a game, maybe I'll get better...
+Engineer: Эта чертова штука сказала мне, что я всего лишь NPC в каком-то тестовом задании для программиста, который хочет делать визуальные новеллы... Поиграй со мной в игру, может, мне станет лучше...
+
+# ec4f599
+; Engineer: Yeah, I like it. Life is  better now. I left the artifact in my bedroom. Take it, if you need.
+Engineer: Да, здорово. Жизнь стала лучше. Я оставил артефакт в своей спальне. Возьми, если тебе нужно.
+
+# 110498da
+; @addQuestLog note:"Poor little NPC... The artifact must be in his bedroom."
+@addQuestLog note:"Бедный NPC... Артефакт должен быть в его спальне."
+
+# 8d97edec
+; InnerVoise: Looks like someone real is here. Look. I can fulfill any wish of my carrier. Do not give me to those one-day flat characters. Leave me with you and I will make you get this job.
+InnerVoise: Похоже, кто-то настоящий заявился. Слушай. Я могу исполнить любое желание моего носителя. Не отдавай меня этим однодневным плоским персонажам. Оставь меня себе, и я сделаю так, что ты получишь эту работу.
+
+# a12201fc
+; @addQuestLog note:"Now it's talking to me too. I think I need to checkout Engineer and share it with him"
+@addQuestLog note:"Теперь эта штука и со мной разговаривает. Я думаю, мне нужно проверить инженера и поделиться этим с ним."
+
+# 5d535772
+; InnerVoise: No, he is not here already. Probably gone to lab, crying about his tiny existence on the way...
+InnerVoise: Нет, он уже не здесь. Наверное ушел в лабораторию, ноя о своем существовании по дороге...
+
+# 2bcb9440
+; @addQuestLog note:"Okey, maybe i will find him in the lab now"
+@addQuestLog note:"Хорошо, может быть, я найду его в лаборатории."
+
+# 33d78830
+; InnerVoise: Here they are... Now you can choose your destiny.
+InnerVoise: Вот они... Теперь время решить свою судьбу.
+
+# 25103da0
+; @choice "Give the artifact to scientist" set:ArtifactQuestResult="Scientist"
+@choice "Отдать артефакт ученому." set:ArtifactQuestResult="Scientist"
+
+# 19d39f8
+; @choice "Give the artifact to engeneer" set:ArtifactQuestResult="Engineer"
+@choice "Отдать артефакт инженеру." set:ArtifactQuestResult="Engineer"
+
+# 190797a0
+; @choice "Keep the artifact" set:ArtifactQuestResult="Keep"
+@choice "Оставить артефакт себе" set:ArtifactQuestResult="Keep"
+
+# f70a98c7
+; Scientist: Still can't understand what it's talking about. But I glad to have it. Thanks.
+Scientist: Все еще не могу понять, о чем он там болтает. Но я рад, что он у меня. Спасибо.
+
+# 3bfd42c9
+; Scientist: I just hope that you knew what you were doing.
+Scientist: Я надеюсь, ты понимал, что делашешь.
+
+# d4c45bef
+; Scientist: Fine... So what are you waiting for? Go and code your visual novels, you, real person...
+Scientist: Ясно... Так чего же ты ждешь? Иди и пиши свои визуальные романы, реальный человек...
+
+# ca294750
+; Engineer: Well, maybe it's words doesn`t metter so mutch. I feel the life I live, after all. 
+Engineer: Ладно, может быть, его слова не так уж важны. Я ведь чувствую, что живу жизнь, в конце концов.
+
+# adbc7d43
+; Engineer: I know that it's time for you to shut this game down. I am glad to feel those last moments real. Thanks.
+Engineer: Я знаю, что тебе пора закрыть эту игру. Но я рад чувствовать, что мои последние моменты - настоящие. Спасибо.
+
+# f82b576e
+; Engineer: What will I become when you leave?
+Engineer: Чем я стану, когда ты уйдешь?
+
+# a9e5b104
+; @choice "What you always were. Just the wind in the void."
+@choice "Тем же, чем был всегда. Ветром в пустоте."
+
+# 6a251e6d
+; Engineer: Maybe that's not so bad...
+Engineer: Может быть, это не так уж и плохо...

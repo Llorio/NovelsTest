@@ -1,0 +1,7 @@
+; English <en> to Russian <ru> localization document for `Captions` managed text document
+
+Button.Log: Журнал
+Button.Map: Карта
+LocationName.Bar: БАР
+LocationName.Bedroom: СПАЛЬНЯ
+LocationName.Lab: ЛАБОРАТОРИЯ

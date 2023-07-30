@@ -1,0 +1,5 @@
+Button.Log: Quest log
+Button.Map: Map
+LocationName.Bar: BAR
+LocationName.Bedroom: BEDROOM
+LocationName.Lab: LAB

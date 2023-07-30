@@ -1,0 +1,7 @@
+#Enter
+@back bar
+@set CurrentLocation="Bar"
+@if ArtifactQuestStage!=4
+@char Engineer
+@endif
+@goto ArtifactQuest

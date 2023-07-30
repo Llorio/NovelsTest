@@ -1,0 +1,5 @@
+; English <en> to Russian <ru> localization document for `Start` naninovel script
+
+# f4c8a666
+; @input PlayerName summary:"Choose your name."
+@input PlayerName summary:"Введите имя."
