@@ -10,7 +10,7 @@ Scientist: О, {PlayerName}, хорошо, что ты здесь. Этот че
 
 # b4211efa
 ; @choice "Where can I find him?" goto:.WhereToFind
-@choice "Где я могу найти его??" goto:.WhereToFind
+@choice "Где я могу найти его?" goto:.WhereToFind
 
 # bd5a93f3
 ; Scientist: From the planet of The Anchients. It speaks unknown language. Please, find engeneer and bring him here. He must be somewhere around.

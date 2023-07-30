@@ -204,7 +204,7 @@ MonoBehaviour:
       guid: 345574525ca634f419324b0d0ed20c40
   - Id: Scripts
     Resources:
-    - name: Scenario
+    - name: Start
       pathPrefix: Scripts
       guid: 4e3eefa35a6b6f64eaaca5945bb91ea4
     - name: Lab
